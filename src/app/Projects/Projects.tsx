@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import projectCard from "./component/ProjectCard";
+import projectCard from "../../component/Projects/ProjectCard";
 interface ProjectsProps {
   animate: boolean;
 }

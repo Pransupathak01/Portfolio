@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
-import AboutMe from "./component/AboutMe/AboutMe";
-import GetInTouch from "./component/Contact/GetInTouch";
-import Experience from "./component/Experience/Experience";
-import Hero from "./component/Hero/Hero";
-import Projects from "./component/Projects/Projects";
-import Technologies from "./component/Technologies/Technologies";
-import Navbar from "./component/navbar/Navbar";
+import AboutMe from "./app/AboutMe/AboutMe";
+import GetInTouch from "./app/Contact/GetInTouch";
+import Experience from "./app/Experience/Experience";
+import Hero from "./app/Hero/Hero";
+import Projects from "./app/Projects/Projects";
+import Technologies from "./app/Technologies/Technologies";
+import Navbar from "./app/navbar/Navbar";
 const App: React.FC = () => {
   const [currentSection, setCurrentSection] = useState<string>(window.location.hash); 
 

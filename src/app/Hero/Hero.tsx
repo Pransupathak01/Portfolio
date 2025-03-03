@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 interface HeroProps {
   animate: boolean;
 }
@@ -39,12 +39,12 @@ const Hero: React.FC<HeroProps> = ({ animate }) => {
               className="my-2 max-w-xl py-6 font-light tracking-tight"
               whileHover={{ scale: 1.05 }}
             >
-              "I am a passionate FrontEnd developer with a talent for crafting
-              responsive and maintainable web applications.With 1+ years of
-              hands-on experience in modern JavaScript frameworks like React,
-              Redux, and a strong background in integrating RESTful APIs, I aim
-              to leverage my skills to create innovative and user-centric
-              solutions that enhance productivity and user engagement."
+              "I am a passionate React Native and Web Developer with expertise in both Expo and native development.
+              With 1.6+ years of hands-on experience, I have built responsive, high-performance mobile and web
+              applications using modern JavaScript frameworks like React, Redux, and Tailwind CSS. I have a strong
+              background in integrating RESTful APIs, ensuring seamless communication between front-end and
+              backend services. My goal is to leverage my skills in React, AI, and full-stack development to create innovative,
+              user-centric solutions that enhance productivity and engagement across mobile and web platforms."
             </motion.p>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               <a
@@ -52,20 +52,20 @@ const Hero: React.FC<HeroProps> = ({ animate }) => {
                 download="Pransu_Pathak_Resume.pdf"
                 className="w-6 h-6 md:w-8 md:h-8"
               >
-                <motion.button 
-                className="px-1 inline-block py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-slate-400 via-fuchsia-300 text-white mb-4"
-                animate={{
-                  background: [
-                    "linear-gradient(to right, #FF5733, #3357FF)",
-                    "linear-gradient(to right, #3357FF, #FF33A1)",
-                    "linear-gradient(to right, #FF33A1, #3357FF)"
-                  ],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 5,
-                }}
+                <motion.button
+                  className="px-1 inline-block py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-slate-400 via-fuchsia-300 text-white mb-4"
+                  animate={{
+                    background: [
+                      "linear-gradient(to right, #FF5733, #3357FF)",
+                      "linear-gradient(to right, #3357FF, #FF33A1)",
+                      "linear-gradient(to right, #FF33A1, #3357FF)"
+                    ],
+                  }}
+                  transition={{
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 5,
+                  }}
                 >
                   <span className="block bg-zinc-800 hover:bg-zink-400 rounded-full px-5 py-2">
                     Download Resume
