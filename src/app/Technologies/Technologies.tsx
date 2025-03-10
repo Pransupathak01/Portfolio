@@ -27,7 +27,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
         Technologies
       </motion.h1>
       <div
-        className="flex flex-wrap items-center justify-center gap-4"
+        className="flex flex-wrap items-center justify-center gap-6 px-20 py-10"
         style={{ opacity: 1, transform: "none" }}
       >
         <motion.div
@@ -39,8 +39,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 24 24"
             className="text-7xl text-cyan-400"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -56,14 +56,35 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
         <motion.div
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
+          <motion.svg stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 22 22"
+            className="text-7xl  text-[#FFFFFFF] p-2"
+            height="1.2em"
+            width="1.2em"
+            xmlns="http://www.w3.org/2000/svg"
+            animate={{ rotate: 360 }}
+            transition={{
+              repeat: Infinity,
+              duration: 5,
+              ease: 'linear'
+            }}>
+            <path d="M9.477 7.638c.164-.24.343-.27.488-.27.145 0 .387.03.551.27 2.13 2.901 6.55 10.56 6.959 10.976.605.618 1.436.233 1.918-.468.475-.69.607-1.174.607-1.69 0-.352-6.883-13.05-7.576-14.106-.667-1.017-.884-1.274-2.025-1.274h-.854c-1.138 0-1.302.257-1.969 1.274C6.883 3.406 0 16.104 0 16.456c0 .517.132 1 .607 1.69.482.7 1.313 1.086 1.918.468.41-.417 4.822-8.075 6.952-10.977z" fill="currentColor"></path>
+          </motion.svg>
+        </motion.div>
+
+        <motion.div
+          className="rounded-2xl border-4 border-neutral-800 p-4"
+        >
           <motion.svg
             stroke="currentColor"
             fill="currentColor"
             stroke-width="0"
             viewBox="0 0 48 48"
             className="text-7xl text-[#DD4B25]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -78,26 +99,6 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
           </motion.svg>
         </motion.div>
 
-        <motion.div
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <motion.svg stroke="currentColor"
-            fill="currentColor"
-            stroke-width="0"
-            viewBox="0 0 22 22"
-            className="text-7xl  text-[#FFFFFFF] p-2"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-            animate={{ rotate: 360 }}
-            transition={{
-              repeat: Infinity,
-              duration: 5,
-              ease: 'linear'
-            }}>
-            <path d="M9.477 7.638c.164-.24.343-.27.488-.27.145 0 .387.03.551.27 2.13 2.901 6.55 10.56 6.959 10.976.605.618 1.436.233 1.918-.468.475-.69.607-1.174.607-1.69 0-.352-6.883-13.05-7.576-14.106-.667-1.017-.884-1.274-2.025-1.274h-.854c-1.138 0-1.302.257-1.969 1.274C6.883 3.406 0 16.104 0 16.456c0 .517.132 1 .607 1.69.482.7 1.313 1.086 1.918.468.41-.417 4.822-8.075 6.952-10.977z" fill="currentColor"></path>
-          </motion.svg>
-        </motion.div>
         <div className="rounded-2xl border-4 border-neutral-800 p-4">
           <motion.svg
             stroke="currentColor"
@@ -105,8 +106,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 48 48"
             className="text-7xl text-[#DD4B25]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -128,8 +129,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 24 24"
             className="text-7xl text-[#EFD81D]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -149,8 +150,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 24 32"
             className="text-7xl pt-2 text-[#4D7C9B]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -169,8 +170,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 24 24"
             className="text-7xl text-[#8712F3]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -189,8 +190,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 56 32"
             className="text-7xl text-[#23ADB8]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -208,8 +209,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 48 48"
             className="text-7xl text-[#23ADB8]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             animate={{ rotate: 360 }}
             transition={{
               repeat: Infinity,
@@ -230,8 +231,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             role="img"
             viewBox="0 0 24 24"
             className="text-7xl text-green-500"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
@@ -245,8 +246,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
         </div>
         <div className="rounded-2xl border-4 border-neutral-800 p-1">
           <motion.svg
-            width="1em"
-            height="1em"
+            width="1.2em"
+            height="1.2em"
             viewBox="0 0 151.151 171.151"
             className="text-8xl "
             xmlns="http://www.w3.org/2000/svg"
@@ -277,8 +278,8 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             stroke-width="0"
             viewBox="0 0 24 24"
             className="text-7xl  text-[#FFFFFFF]"
-            height="1em"
-            width="1em"
+            height="1.2em"
+            width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
             animate={{ rotate: 360 }}
             transition={{
