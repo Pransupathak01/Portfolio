@@ -1,31 +1,32 @@
-interface ProjectCardProps{
-    imageSrc: string;
-    imageAlt: string;
-    title: string;
-    description: string;
-    techStack: string[];
+interface ProjectCardProps {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+  techStack: string[];
 }
 const projectCard = ({
-    imageSrc,
-    imageAlt,
-    title,
-    description,
-    techStack,
-  }: ProjectCardProps): JSX.Element =>{
-    return(
-        <div className="mb-8 flex flex-wrap lg:justify-center">
-        <div className="w-full lg:w-1/4">
-          <img
-            src={imageSrc}
-            width="150"
-            height="150"
-            alt={imageAlt}
-            className="mb-6 rounded"
-          />
-        </div>
-        <div className="w-full max-w-2xl lg:w-3/4">
-          <h6 className="mb-2 font-semibold">{title}</h6>
-          <p className="mb-4 text-neutral-400">{description}</p>
+  imageSrc,
+  imageAlt,
+  title,
+  description,
+  techStack,
+}: ProjectCardProps): JSX.Element => {
+  return (
+    <div className="mb-12 flex flex-wrap lg:justify-center">
+      <div className="w-full lg:w-1/4">
+        <img
+          src={imageSrc}
+          width="150"
+          height="150"
+          alt={imageAlt}
+          className="mb-6 rounded"
+        />
+      </div>
+      <div className="w-full max-w-2xl lg:w-3/4">
+        <h6 className="mb-2 font-semibold">{title}</h6>
+        <p className="mb-4 text-neutral-400">{description}</p>
+        <div className="flex flex-wrap gap-2">
           {techStack.map((tech, index) => (
             <span
               key={index}
@@ -36,7 +37,8 @@ const projectCard = ({
           ))}
         </div>
       </div>
-     
-    )
+    </div>
+
+  )
 }
 export default projectCard;
