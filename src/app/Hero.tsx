@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ animate }) => {
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
             <motion.h1
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="pb-16 text-4xl font-thin tracking-tight lg:mt-16 md:text-5xl lg:text-8xl"
               whileHover={{ scale: 1.1 }}
             >
               Pransu Pathak

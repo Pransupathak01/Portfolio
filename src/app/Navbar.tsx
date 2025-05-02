@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ animate }) => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <img className="mx-2 w-24 md:w-40 h-auto" src="/pp.png" />
+        <img className=" w-28 md:w-40 h-auto" src="/pp.png" />
       </motion.div>
       <div className="m-8 flex items-center justify-center gap-4 text-2xl">
         <motion.a

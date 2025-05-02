@@ -27,7 +27,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
         Technologies
       </motion.h1>
       <div
-        className="flex flex-wrap items-center justify-center gap-6 px-20 py-10"
+        className="flex flex-wrap items-center justify-center gap-6 px-2 md:px-20 py-10"
         style={{ opacity: 1, transform: "none" }}
       >
         <motion.div

@@ -43,7 +43,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-8 pr-4">
+            <p className="my-2 max-w-xl py-8 ">
               I am an innovative problem solver with a creative flair who is
               passionate about examining the nexus between technology and the
               human experience. Leveraging my experience and adding to interesting

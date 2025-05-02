@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import AboutMe from "./app/AboutMe/AboutMe";
-import GetInTouch from "./app/Contact/GetInTouch";
-import Experience from "./app/Experience/Experience";
-import Hero from "./app/Hero/Hero";
-import Projects from "./app/Projects/Projects";
-import Technologies from "./app/Technologies/Technologies";
-import Navbar from "./app/navbar/Navbar";
+import AboutMe from "./app/AboutMe";
+import GetInTouch from "./app/GetInTouch";
+import Experience from "./app/Experience";
+import Hero from "./app/Hero";
+import ProjectMob from "./app/projects/ProjectMob";
+import ProjectWeb from "./app/projects/ProjectWeb";
+
+import Technologies from "./app/Technologies";
+import Navbar from "./app/Navbar";
 const App: React.FC = () => {
   const [currentSection, setCurrentSection] = useState<string>(window.location.hash); 
 
@@ -14,6 +16,8 @@ const App: React.FC = () => {
   const technologiesRef = useRef(null);
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
+  const projectsRef1 = useRef(null);
+
   const getInTouchRef = useRef(null);
 
   const sections = [
@@ -22,6 +26,8 @@ const App: React.FC = () => {
     { id: "technologies", ref: technologiesRef },
     { id: "experience", ref: experienceRef },
     { id: "projects", ref: projectsRef },
+     { id: "projects1", ref: projectsRef1 },
+    // { id: "projects", ref: projectsRef },
     { id: "contact", ref: getInTouchRef },
   ];
   useEffect(() => {
@@ -55,7 +61,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden h-screen w-screen mx-auto flex flex-col md:px-36 xl:px-56 bg-gradient-to-b text-white">
+    <div className="overflow-x-hidden h-screen w-screen mx-auto flex flex-col px-8 md:px-12 xl:px-32 2xl:px-56 bg-gradient-to-b text-white">
       <div ref={heroRef} id="hero">
       <Navbar animate={currentSection === "#hero"}/>
       </div>
@@ -72,10 +78,13 @@ const App: React.FC = () => {
         <Experience animate={currentSection === "#experience"} />
       </div>
       <div ref={projectsRef} id="projects">
-        <Projects animate={currentSection === "#projects"} />
+        <ProjectMob animate={currentSection === "#projects"} />
       </div>
-      <div ref={getInTouchRef} id="projects">
-        <GetInTouch animate={currentSection === "#projects"} />
+      <div ref={projectsRef1} id="projects1">
+        <ProjectWeb animate={currentSection === "#projects1"} />
+      </div>
+      <div ref={getInTouchRef} id="contact">
+        <GetInTouch animate={currentSection === "#contact"} />
       </div>
     </div>
   );

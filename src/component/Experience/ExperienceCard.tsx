@@ -16,9 +16,9 @@ const experienceCard = ({
   techStack,
 }: experienceCardProps): JSX.Element => {
   return (
-    <div className="mb-12 flex flex-wrap lg:justify-center">
+    <div className="mb-12 flex flex-wrap lg:justify-center px-6">
       <motion.div
-        className="w-full lg:w-1/4"
+        className="w-full lg:w-1/4 "
         style={{
           opacity: 1,
           transform: "none",
@@ -30,19 +30,19 @@ const experienceCard = ({
         >{from} - {to}</motion.p>
       </motion.div>
       <div
-        className="w-full max-w-2xl lg:w-3/4"
+        className="w-full max-w-2xl lg:w-3/4 "
         style={{
           opacity: 1,
           transform: "none",
         }}
       >
-        <motion.h6 className="mb-2 font-semibold" >
+        <motion.h6 className="mb-2 font-semibold " >
           {position} -
-          <span className="text-sm text-purple-100">
+          <span className="text-sm text-purple-100 ">
             {company}
           </span>
         </motion.h6>
-        <p className="mb-4 text-neutral-400">
+        <p className="mb-4 text-neutral-400 ">
           {description}
         </p>
         <div className="flex flex-wrap gap-2">
