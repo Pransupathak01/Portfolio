@@ -22,7 +22,7 @@ const ProjectMob: React.FC<ProjectsProps> = ({ animate }) => {
     imageSrc: crstImage,
     imageAlt: 'Project 2',
     title: 'Crst - Mobile app ',
-    description: 'I developed the CRST Mobile App to streamline transportation and logistics operations, covering job installation, delivery coordination, and product distribution. Key features include onsite job management, adding additional SKUs, and capturing required pictures for documentation. This enhanced operational efficiency, improved tracking, and ensured seamless communication between drivers, dispatch, and administrative teams.',
+    description: 'I developed the CRST Mobile App to streamline transportation and logistics operations, covering job installation, delivery coordination, and product distribution. Key features include onsite job management, adding additional SKUs, and capturing required pictures for documentation. Implemented core functionalities such as job onsite tracking, SKU addition, and required image uploads. Contributed to the development of the CRST Mobile App to streamline transportation and logistics processes, including job installations, delivery scheduling, and efficient product distribution across multiple locations, enhancing field service management and operational accuracy. This enhanced operational efficiency, improved tracking, and ensured seamless communication between drivers, dispatch, and administrative teams.',
     techStack: ['React Native', 'StyleSheet', 'React.js', 'Context API', 'Redux', 'Javascript', 'TypeScript', "Android Studio", "Xcode"],
   })
 

@@ -5,6 +5,7 @@ interface AboutMeProps {
 }
 const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
   const [isAnimated, setIsAnimated] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     if (animate) {
@@ -29,22 +30,27 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
       </motion.h1>
       <div className="flex flex-wrap">
         <div
-          className="w-full lg:w-1/2 lg:p-8"
+          className="w-full lg:w-1/2 lg:p-8 lg:mb-8"
         >
           <div className="flex items-center justify-center">
-            <img
+            <motion.img
               className="rounded-2xl shadow-lg shadow-gray-500"
               src="profile.png"
               alt="about"
               width={250}
+              whileHover={{scale:1.08}}
             />
           </div>
         </div>
         <div
           className="w-full lg:w-1/2"
         >
-          <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-8 ">
+          <p
+            className="my-8 lg:my-2 px-6  w-full max-w-5xl  tracking-tight "
+          >
+            <motion.p
+              className={`my-1 w-full max-w-5xl font-light tracking-tight md:text-lg lg:text-xl lg:mb-10 ${isExpanded ? "line-clamp-none" : "line-clamp-5"}  lg:line-clamp-none`}
+            >
               I am an innovative problem solver with a creative flair who is
               passionate about examining the nexus between technology and the
               human experience. Leveraging my experience and adding to interesting
@@ -59,9 +65,16 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
               in integrating AI-driven solutions into mobile applications.
               My goal has always been to learn, adapt, and contribute to my organization's
               growth by applying my skills and sharing my learning experiences.
-            </p>
 
-          </div>
+            </motion.p>
+              <h6
+                className="mb-4 font-400 text-lg text-neutral-200 md:block lg:hidden cursor-pointer"
+                onClick={() => setIsExpanded(!isExpanded)}
+              >
+                {!isExpanded ? "Read More" : "Read Less"}
+              </h6>
+          </p>
+
         </div>
       </div>
     </motion.div>

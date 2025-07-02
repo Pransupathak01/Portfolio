@@ -80,7 +80,7 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
             value={name}
             onChange={(val) => setName(val.target.value)}
           />
-          <div className="mb-2">
+          <div className=" flex flex-col justify-center items-center  mb-2  w-full ">
             <input
               className="mb-2 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
               placeholder="Email"
