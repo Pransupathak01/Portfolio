@@ -30,7 +30,6 @@ const Navbar: React.FC<NavbarProps> = ({ animate }) => {
           href="https://www.linkedin.com/in/pransu-pathak-354b1721a"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
-          className="p-2"
         >
           <svg
             stroke="currentColor"
