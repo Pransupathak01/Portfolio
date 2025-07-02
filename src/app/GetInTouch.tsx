@@ -24,18 +24,23 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
     const emailValue = val.target.value;
     setEmail(emailValue);
     if (validateEmail(emailValue)) {
-      setEmailError(" ");
+      setEmailError("");
     }
   };
 
-  const notify = () =>{
-    if(name&&message&&validateEmail(email)){
+  const notify = () => {
+    if (!name || !message || !email) {
+      toast.error("All fields are required.");
+      return;
+    } else if (name && message && email && !validateEmail(email)) {
       setEmailError("Please enter a valid email address.");
+      return;
+    } else {
+      setEmailError("");
+      toast.success("Thanks! I’ll be in touch soon.");
+    }
+  };
 
-      toast("Thanks! I’ll be in touch soon.");
-    }
-    
-    }
   useEffect(() => {
     if (animate) {
       setIsAnimated(true);
@@ -75,13 +80,16 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
             value={name}
             onChange={(val) => setName(val.target.value)}
           />
-          <input
-            className="mb-4 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
-            placeholder="Email"
-            value={email}
-            onChange={handleEmailChange}
-          />
-          {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
+          <div className="mb-2">
+            <input
+              className="mb-2 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
+              placeholder="Email"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            {emailError && <p className="text-red-500 text-mb mb-4">{emailError}</p>}
+          </div>
+
           <textarea
             className="mb-4 p-2 px-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px] mx-auto"
             placeholder="Message"
