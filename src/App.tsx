@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import AboutMe from "./app/AboutMe";
 import GetInTouch from "./app/GetInTouch";
-import Experience from "./app/Experience";
+import Experience from "./app/projects/experience/Experience";
 import Hero from "./app/Hero";
 import ProjectMob from "./app/projects/ProjectMob";
 import ProjectWeb from "./app/projects/ProjectWeb";

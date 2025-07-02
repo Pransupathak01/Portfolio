@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import projectCard from "../../component/projects/ProjectCard";
-import crstImage from '../../assets/images/crst2.png';
+import projectCard from "./ProjectCard";
 import cimemaImage from '../../assets/images/cinema2.png';
 import uniLinksImage from '../../assets/images/unilink1.png';
 import cStarImage from '../../assets/images/cstar1.png';

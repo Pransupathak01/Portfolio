@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import experienceCard from "../component/experience/ExperienceCard";
+import experienceCard from "./ExperienceCard";
 interface ExperienceProps {
   animate: boolean;
 }
