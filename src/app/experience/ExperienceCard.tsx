@@ -59,11 +59,11 @@ const experienceCard = ({
             {!isExpanded? "Read More": "Read Less"}
           </h6>
       
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 ">
           {techStack.map((tech, index) => (
             <motion.span
               key={index}
-              className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800"
+              className="mr-2 rounded bg-neutral-900 my-1 px-2 py-1 text-sm font-medium text-purple-800"
               whileHover={{ scale: 1.1 }}
             >
               {tech}

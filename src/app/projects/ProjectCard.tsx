@@ -49,7 +49,7 @@ const projectCard = ({
           {techStack.map((tech, index) => (
             <motion.span
               key={index}
-              className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900"
+              className="mr-2 rounded bg-neutral-900 px-2 my-1 py-1 text-sm font-medium text-purple-900"
               whileHover={{ scale: 1.1 }}
             >
               {tech}
