@@ -13,7 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ animate }) => {
     }
   }, [animate]);
   return (
-    <motion.div className="w-full h-40 mb-20 flex flex-row items-center justify-between py-6 text-white"
+    <motion.div className="w-full h-40 mb:16 md:mb-20 md:mt-2 flex flex-row items-center justify-between md:py-6 text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: isAnimated ? 1 : 0, y: isAnimated ? 0 : -50 }}
       transition={{ duration: 1 }}
@@ -25,11 +25,13 @@ const Navbar: React.FC<NavbarProps> = ({ animate }) => {
       >
         <img className=" w-32 md:w-40 h-auto" src="/pp.png" />
       </motion.div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+      <div className="m-8 flex items-center justify-center gap-4 md:gap-6 text-2xl">
         <motion.a
           href="https://www.linkedin.com/in/pransu-pathak-354b1721a"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          className="pr-2"
+
         >
           <svg
             stroke="currentColor"
@@ -48,6 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ animate }) => {
           href="https://github.com/Pransupathak01/"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          className="pr-2"
         >
           <svg
             stroke="currentColor"
@@ -66,6 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({ animate }) => {
           href="https://x.com/PransuPathak"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          className="pr-2"
         >
           <svg
             stroke="currentColor"
@@ -84,6 +88,7 @@ const Navbar: React.FC<NavbarProps> = ({ animate }) => {
           href="https://expo.dev/accounts/pransup01"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
+          className="pr-1"
         >
           <svg
             stroke="currentColor"

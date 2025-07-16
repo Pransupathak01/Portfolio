@@ -8,10 +8,10 @@ interface GetInTouchProps {
 }
 const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
   const [isAnimated, setIsAnimated] = useState(false);
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<any>("");
-  const [message, setMessage] = useState<string>("");
-  const [emailError, setEmailError] = useState("");
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const { name, email, message } = form;
+  const [emailError, setEmailError] = useState('');
+
 
   // Function to validate email using regex
   const validateEmail = (email: any) => {
@@ -22,20 +22,42 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
   // Handle email change and validate
   const handleEmailChange = (val: any) => {
     const emailValue = val.target.value;
-    setEmail(emailValue);
+    setForm({ ...form, email: val.target.value });
     if (validateEmail(emailValue)) {
       setEmailError(" ");
     }
   };
+  const handleSubmit = async (e?: React.FormEvent | React.MouseEvent) => {
+    if (e) e.preventDefault();
 
-  const notify = () =>{
-    if(name&&message&&validateEmail(email)){
+    if (!name || !email || !message) {
+      toast.error("All fields are required.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
       setEmailError("Please enter a valid email address.");
+      return;
+    }
 
-      toast("Thanks! I’ll be in touch soon.");
+    setEmailError('');
+    toast.success("Thanks! I’ll be in touch soon.");
+
+    try {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      });
+      console.log("Response:", res);
+      // Clear form
+      setForm({ name: '', email: '', message: '' });
+    } catch (err) {
+      toast.error('Failed to send email.');
+      console.error(err);
     }
-    
-    }
+  };
+  
   useEffect(() => {
     if (animate) {
       setIsAnimated(true);
@@ -73,25 +95,27 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
             className="mb-4 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
             placeholder="Full Name"
             value={name}
-            onChange={(val) => setName(val.target.value)}
-          />
-          <input
-            className="mb-4 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
-            placeholder="Email"
-            value={email}
-            onChange={handleEmailChange}
-          />
-          {emailError && <p className="text-red-500 text-sm">{emailError}</p>}
+            onChange={(e) => setForm({ ...form, name: e.target.value })} />
+          <div className=" flex flex-col justify-center items-center  mb-2  w-full ">
+            <input
+              className="mb-2 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
+              placeholder="Email"
+              value={email}
+              onChange={handleEmailChange}
+            />
+            {emailError && <p className="text-red-500 text-mb mb-4">{emailError}</p>}
+          </div>
+
           <textarea
             className="mb-4 p-2 px-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px] mx-auto"
             placeholder="Message"
             value={message}
-            onChange={(val) => setMessage(val.target.value)}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
           />
 
           <button
             className="p-3 text-lg inline-block  w-full sm:w-[450px] rounded-xl bg-gradient-to-br from-slate-800 via-fuchsia-800  to-slate-800 text-white"
-            onClick={notify}
+            onClick={handleSubmit}
           >
             📩 Send Message
           </button>
