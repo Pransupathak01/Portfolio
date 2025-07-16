@@ -44,7 +44,7 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
     toast.success("Thanks! I’ll be in touch soon.");
 
     try {
-      const res = await fetch('/api/send-email', {
+      const res = await fetch('https://portfolio-production-a5f5.up.railway.app/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, message }),
@@ -92,13 +92,13 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
 
         <div className="flex flex-col justify-center items-center  w-full py-8">
           <input
-            className="mb-4 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
+            className="mb-4 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full w-[300px] sm:w-[450px]  mx-auto"
             placeholder="Full Name"
             value={name}
             onChange={(e) => setForm({ ...form, name: e.target.value })} />
           <div className=" flex flex-col justify-center items-center  mb-2  w-full ">
             <input
-              className="mb-2 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px]  mx-auto"
+              className="mb-2 p-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full w-[300px] sm:w-[450px]  mx-auto"
               placeholder="Email"
               value={email}
               onChange={handleEmailChange}
@@ -107,14 +107,14 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ animate }) => {
           </div>
 
           <textarea
-            className="mb-4 p-2 px-3 text-lg text-black border rounded-xl border-gray-300 rounded w-full sm:w-[450px] mx-auto"
+            className="mb-4 p-2 px-3 text-lg text-black border rounded-xl border-gray-300 rounded sm:h-[100px] w-full w-[300px] sm:w-[450px] mx-auto"
             placeholder="Message"
             value={message}
             onChange={(e) => setForm({ ...form, message: e.target.value })}
           />
 
           <button
-            className="p-3 text-lg inline-block  w-full sm:w-[450px] rounded-xl bg-gradient-to-br from-slate-800 via-fuchsia-800  to-slate-800 text-white"
+            className="p-3 text-lg inline-block  w-full w-[300px] sm:w-[450px]  rounded-xl bg-gradient-to-br from-slate-800 via-fuchsia-800  to-slate-800 text-white"
             onClick={handleSubmit}
           >
             📩 Send Message
