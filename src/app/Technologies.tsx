@@ -27,11 +27,11 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
         Technologies
       </motion.h1>
       <div
-        className="flex flex-wrap items-center justify-center gap-6 px-2 md:px-20 py-10"
+        className="flex flex-wrap items-center justify-center gap-4 px-2 md:px-20 py-10"
         style={{ opacity: 1, transform: "none" }}
       >
         <motion.div
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="rounded-2xl border-4 border-neutral-800 p-4 mx-2"
         >
           <motion.svg
             stroke="currentColor"
@@ -54,7 +54,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
         </motion.div>
 
         <motion.div
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="rounded-2xl border-4 border-neutral-800 p-4 mx-2"
         >
           <motion.svg stroke="currentColor"
             fill="currentColor"
@@ -75,7 +75,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
         </motion.div>
 
         <motion.div
-          className="rounded-2xl border-4 border-neutral-800 p-4"
+          className="rounded-2xl border-4 border-neutral-800 p-4 mx-2"
         >
           <motion.svg
             stroke="currentColor"
@@ -99,7 +99,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
           </motion.svg>
         </motion.div>
 
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             stroke="currentColor"
             fill="currentColor"
@@ -122,7 +122,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
           </motion.svg>
         </div>
 
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             stroke="currentColor"
             fill="currentColor"
@@ -143,7 +143,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
           </motion.svg>
         </div>
 
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             stroke="currentColor"
             fill="currentColor"
@@ -163,7 +163,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             <path d="m.98608 0h24.32332c.5446 0 .9861.436522.9861.975v24.05c0 .5385-.4415.975-.9861.975h-24.32332c-.544597 0-.98608-.4365-.98608-.975v-24.05c0-.538478.441483-.975.98608-.975zm13.63142 13.8324v-2.1324h-9.35841v2.1324h3.34111v9.4946h2.6598v-9.4946zm1.0604 9.2439c.4289.2162.9362.3784 1.5218.4865.5857.1081 1.2029.1622 1.8518.1622.6324 0 1.2331-.0595 1.8023-.1784.5691-.1189 1.0681-.3149 1.497-.5879s.7685-.6297 1.0187-1.0703.3753-.9852.3753-1.6339c0-.4703-.0715-.8824-.2145-1.2365-.1429-.3541-.3491-.669-.6186-.9447-.2694-.2757-.5925-.523-.9692-.7419s-.8014-.4257-1.2743-.6203c-.3465-.1406-.6572-.2771-.9321-.4095-.275-.1324-.5087-.2676-.7011-.4054-.1925-.1379-.3409-.2838-.4454-.4379-.1045-.154-.1567-.3284-.1567-.523 0-.1784.0467-.3392.1402-.4824.0935-.1433.2254-.2663.3959-.369s.3794-.1824.6269-.2392c.2474-.0567.5224-.0851.8248-.0851.22 0 .4523.0162.697.0486.2447.0325.4908.0825.7382.15.2475.0676.4881.1527.7218.2555.2337.1027.4495.2216.6475.3567v-2.4244c-.4015-.1514-.84-.2636-1.3157-.3365-.4756-.073-1.0214-.1095-1.6373-.1095-.6268 0-1.2207.0662-1.7816.1987-.5609.1324-1.0544.3392-1.4806.6203s-.763.6392-1.0104 1.0743c-.2475.4352-.3712.9555-.3712 1.5609 0 .7731.2268 1.4326.6805 1.9785.4537.546 1.1424 1.0082 2.0662 1.3866.363.146.7011.2892 1.0146.4298.3134.1405.5842.2865.8124.4378.2282.1514.4083.3162.5403.4946s.198.3811.198.6082c0 .1676-.0413.323-.1238.4662-.0825.1433-.2076.2676-.3753.373s-.3766.1879-.6268.2473c-.2502.0595-.5431.0892-.8785.0892-.5719 0-1.1383-.0986-1.6992-.2959-.5608-.1973-1.0805-.4933-1.5589-.8879z" fill="#38bdf8"></path>
           </motion.svg>
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             stroke="currentColor"
             fill="currentColor"
@@ -183,13 +183,13 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             <path d="M5.42333 3.03818C4.13949 3.03818 3.18953 4.16184 3.23206 5.38047C3.27286 6.55123 3.21985 8.0675 2.83811 9.30405C2.45523 10.5442 1.80769 11.3298 0.75 11.4307V12.5694C1.80769 12.6703 2.45523 13.4559 2.83811 14.696C3.21985 15.9326 3.27286 17.4489 3.23206 18.6196C3.18953 19.8381 4.13949 20.9619 5.42352 20.9619H18.5784C19.8622 20.9619 20.812 19.8382 20.7695 18.6196C20.7287 17.4489 20.7817 15.9326 21.1634 14.696C21.5465 13.4559 22.1923 12.6703 23.25 12.5694V11.4307C22.1923 11.3298 21.5465 10.5442 21.1634 9.30405C20.7817 8.06769 20.7287 6.55123 20.7695 5.38047C20.812 4.16203 19.8622 3.03818 18.5784 3.03818H5.42314H5.42333ZM16.0042 14.0714C16.0042 15.7493 14.7526 16.767 12.6756 16.767H9.13983C9.03869 16.767 8.94169 16.7268 8.87017 16.6553C8.79865 16.5838 8.75847 16.4868 8.75847 16.3856V7.61445C8.75847 7.51331 8.79865 7.41631 8.87017 7.34479C8.94169 7.27327 9.03869 7.23309 9.13983 7.23309H12.6554C14.3873 7.23309 15.5239 8.17123 15.5239 9.61161C15.5239 10.6226 14.7593 11.5277 13.7851 11.6862V11.739C15.1113 11.8845 16.0042 12.8028 16.0042 14.0714ZM12.29 8.44199H10.274V11.2896H11.972C13.2846 11.2896 14.0084 10.761 14.0084 9.81621C14.0084 8.93089 13.386 8.44199 12.29 8.44199ZM10.274 12.4195V15.5577H12.3642C13.7308 15.5577 14.4548 15.0093 14.4548 13.9787C14.4548 12.9479 13.7106 12.4193 12.2763 12.4193L10.274 12.4195Z"></path>
           </motion.svg>
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             stroke="currentColor"
             fill="currentColor"
             stroke-width="0"
             viewBox="0 0 56 32"
-            className=" text-[#23ADB8] text-5xl md:text-7xl"
+            className=" text-[#23ADB8] text-5xl md:text-7xl mx-2"
             height="1.2em"
             width="1.2em"
             xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +203,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             <path d="M25.517 0C18.712 0 14.46 3.382 12.758 10.146c2.552-3.382 5.529-4.65 8.931-3.805 1.941.482 3.329 1.882 4.864 3.432 2.502 2.524 5.398 5.445 11.722 5.445 6.804 0 11.057-3.382 12.758-10.145-2.551 3.382-5.528 4.65-8.93 3.804-1.942-.482-3.33-1.882-4.865-3.431C34.736 2.92 31.841 0 25.517 0zM12.758 15.218C5.954 15.218 1.701 18.6 0 25.364c2.552-3.382 5.529-4.65 8.93-3.805 1.942.482 3.33 1.882 4.865 3.432 2.502 2.524 5.397 5.445 11.722 5.445 6.804 0 11.057-3.381 12.758-10.145-2.552 3.382-5.529 4.65-8.931 3.805-1.941-.483-3.329-1.883-4.864-3.432-2.502-2.524-5.398-5.446-11.722-5.446z" fill="#38bdf8"></path>
           </motion.svg>
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor"
             fill="currentColor"
             stroke-width="0"
@@ -223,7 +223,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
           </motion.svg>
 
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             stroke="currentColor"
             fill="currentColor"
@@ -244,7 +244,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
             <path d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z"></path>
           </motion.svg>
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             width="1.2em"
             height="1.2em"
@@ -272,7 +272,7 @@ const Technologies: React.FC<TechnologiesProps> = ({ animate }) => {
           </motion.svg>
 
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 mx-2">
           <motion.svg
             fill="currentColor"
             stroke-width="0"
