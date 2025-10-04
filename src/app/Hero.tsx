@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ animate }) => {
         </motion.p>
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <a
-            href=""
+            href="PransuResume.pdf"
             download="Pransu_Pathak_Resume.pdf"
             className="w-6 h-6 md:w-8 md:h-8"
           >
