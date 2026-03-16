@@ -7,6 +7,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   techStack: string[];
+  link?: string;
 }
 const projectCard = ({
   imageSrc,
@@ -14,6 +15,7 @@ const projectCard = ({
   title,
   description,
   techStack,
+  link,
 }: ProjectCardProps): JSX.Element => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -29,7 +31,19 @@ const projectCard = ({
         />
       </div>
       <div className="w-full max-w-2xl md:w-3/4 pl-4">
-        <h6 className="mb-2 font-semibold">{title}</h6>
+        <h6 className="mb-2 font-semibold flex items-center flex-wrap">
+          {title}
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 text-purple-400 hover:text-purple-300 text-sm font-normal underline"
+            >
+              View Project
+            </a>
+          )}
+        </h6>
         <p
           className={` text-neutral-400 lg:mb-4 ${isExpanded ? "line-clamp-none" : "line-clamp-3"
             }  lg:line-clamp-none`}

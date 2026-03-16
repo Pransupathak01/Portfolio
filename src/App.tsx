@@ -3,13 +3,14 @@ import AboutMe from "./app/AboutMe";
 import GetInTouch from "./app/GetInTouch";
 import Experience from "./app/experience/Experience";
 import Hero from "./app/Hero";
+import ProjectPincodekart from "./app/projects/projectPincodekart";
 import ProjectMob from "./app/projects/ProjectMob";
 import ProjectWeb from "./app/projects/ProjectWeb";
 
 import Technologies from "./app/Technologies";
 import Navbar from "./app/Navbar";
 const App: React.FC = () => {
-  const [currentSection, setCurrentSection] = useState<string>(window.location.hash); 
+  const [currentSection, setCurrentSection] = useState<string>(window.location.hash);
 
   const heroRef = useRef(null);
   const aboutMeRef = useRef(null);
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const projectsRef1 = useRef(null);
+  const projectsRef2 = useRef(null);
 
   const getInTouchRef = useRef(null);
 
@@ -26,7 +28,9 @@ const App: React.FC = () => {
     { id: "technologies", ref: technologiesRef },
     { id: "experience", ref: experienceRef },
     { id: "projects", ref: projectsRef },
-     { id: "projects1", ref: projectsRef1 },
+    { id: "projects1", ref: projectsRef1 },
+    { id: "projects2", ref: projectsRef2 },
+
     // { id: "projects", ref: projectsRef },
     { id: "contact", ref: getInTouchRef },
   ];
@@ -63,7 +67,7 @@ const App: React.FC = () => {
   return (
     <div className="overflow-x-hidden h-screen w-screen mx-auto flex flex-col px-8 md:px-12 xl:px-32 2xl:px-56 bg-gradient-to-b text-white">
       <div ref={heroRef} id="hero">
-      <Navbar animate={currentSection === "#hero"}/>
+        <Navbar animate={currentSection === "#hero"} />
       </div>
       <div ref={heroRef} id="hero">
         <Hero animate={currentSection === "#hero"} />
@@ -78,10 +82,13 @@ const App: React.FC = () => {
         <Experience animate={currentSection === "#experience"} />
       </div>
       <div ref={projectsRef} id="projects">
-        <ProjectMob animate={currentSection === "#projects"} />
+        <ProjectPincodekart animate={currentSection === "#projects"} />
       </div>
       <div ref={projectsRef1} id="projects1">
-        <ProjectWeb animate={currentSection === "#projects1"} />
+        <ProjectMob animate={currentSection === "#projects1"} />
+      </div>
+      <div ref={projectsRef2} id="projects2">
+        <ProjectWeb animate={currentSection === "#projects2"} />
       </div>
       <div ref={getInTouchRef} id="contact">
         <GetInTouch animate={currentSection === "#contact"} />

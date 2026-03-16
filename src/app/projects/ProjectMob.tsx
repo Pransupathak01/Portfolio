@@ -40,12 +40,12 @@ const ProjectMob: React.FC<ProjectsProps> = ({ animate }) => {
       animate={{ opacity: isAnimated ? 1 : 0, x: isAnimated ? 0 : -50 }}
       transition={{ duration: 1 }}
     >
-      <motion.h1
+      {/* <motion.h1
         className="my-20 mx-10 text-center text-4xl"
         whileHover={{ scale: 1.2 }}
       >
         Projects
-      </motion.h1>
+      </motion.h1> */}
       <motion.div>
         {project1}
         {project2}
