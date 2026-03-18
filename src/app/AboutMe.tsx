@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface AboutMeProps {
   animate: boolean;
@@ -44,14 +44,14 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
         </motion.div>
 
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
-          
+
           {/* Image Section */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="w-full lg:w-5/12 flex justify-center relative group"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/30 to-blue-500/30 rounded-[2.5rem] blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50"></div>
-            <motion.div 
+            <motion.div
               className="relative p-2 glass rounded-[2.5rem] shadow-2xl overflow-hidden"
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -68,7 +68,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
           </motion.div>
 
           {/* Text Section */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="w-full lg:w-7/12 flex flex-col justify-center"
           >
@@ -76,7 +76,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
               <motion.p variants={itemVariants}>
                 I am an innovative problem solver with a creative flair who is passionate about examining the nexus between technology and the human experience. Leveraging my experience and adding to interesting projects that fit my values and interests is something I'm excited to do.
               </motion.p>
-              
+
               <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isExpanded ? "max-h-[1000px]" : "max-h-0 lg:max-h-[1000px]"} lg:opacity-100 ${isExpanded ? "opacity-100" : "opacity-0 lg:opacity-100"}`}>
                 <motion.p variants={itemVariants} className="mt-6">
                   My journey in software development started with React.js, where I built robust web applications, and later expanded into Node.js, Express.js, and MySQL for comprehensive backend architecture. During my initial days, I navigated across multiple technologies, which forged a well-rounded understanding of full-stack ecosystems.
@@ -86,7 +86,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
                 </motion.p>
               </div>
 
-              <motion.div 
+              <motion.div
                 variants={itemVariants}
                 className="pt-4 lg:hidden"
               >
@@ -95,8 +95,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
                   className="flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors uppercase tracking-widest"
                 >
                   {isExpanded ? "Read Less" : "Discover More"}
-                  <svg 
-                    className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`} 
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
                     fill="none" viewBox="0 0 24 24" stroke="currentColor"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -106,7 +106,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ animate }) => {
             </div>
 
             {/* Quick Stats / Highlights */}
-            <motion.div 
+            <motion.div
               variants={itemVariants}
               className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6 pt-10 border-t border-white/5"
             >
