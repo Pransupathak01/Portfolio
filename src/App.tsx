@@ -78,7 +78,7 @@ const App: React.FC = () => {
           <Experience animate={currentSection === "#experience"} />
         </div>
         <div ref={projectsRef} id="projects">
-          <ProjectsPage animate={currentSection === "#projects"} />
+          <ProjectsPage />
         </div>
         <div ref={getInTouchRef} id="contact">
           <GetInTouch animate={currentSection === "#contact"} />
